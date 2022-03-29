@@ -1,0 +1,39 @@
+@font-face {
+    font-family: PressStart2P-Regular;
+    src: url(./font/PressStart2P-Regular.ttf);
+}
+
+body {
+    font-family: PressStart2P-Regular;
+    margin: 0;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tool-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    background-color: gray;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+.tool-bar input {
+    display: block;
+}
+
+.sketch-pad {
+    width: 750px;
+    height: 600px;
+    background: gray;
+    border: 5px solid black;
+    border-radius: 5px;
+}
