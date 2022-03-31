@@ -30,10 +30,23 @@ body {
     display: block;
 }
 
-.sketch-pad {
+/* .sketch-pad-background {
     width: 750px;
     height: 600px;
-    background: gray;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 1;
+} */
+
+.sketch-pad {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+    grid-gap: 2px;
+    z-index: 2;
+    width: 750px;
+    height: 600px;
+    background-color: gray;
     border: 5px solid black;
     border-radius: 5px;
 }
