@@ -1,13 +1,29 @@
 const pad = document.querySelector(".sketch-pad");
 const pixels = document.querySelector("#pixel-range");
-const cell = document.querySelector("#cell");
+const cell = document.querySelector(".cell");
+const blackButton = document.querySelector("#black-button");
+const rainbowButton = document.querySelector("#rainbow-button");
+const eraserButton = document.querySelector("#eraser-button");
+const clearButton = document.querySelector("#clear-button");
 
-createGrid(10);
+//sets default value for grid cell count and enables drawing functionality
+createGrid(50);
+changeCellColors();
 
+//event listener for cell count range 
 pixels.addEventListener('change', function (e) {
     cleanGrid();
     createGrid(e.target.valueAsNumber);
 });
+
+//event listener for black button
+blackButton.addEventListener('click', changeCellColors);
+
+//event listener for eraser button
+eraserButton.addEventListener('click', eraseCellColors);
+
+//event listener for rainbow button
+
 
 //Removes all divs from grid, which allows cell count variability 
 function cleanGrid () {
@@ -35,10 +51,14 @@ function createGrid(e) {
 
 //when hovered over div in pad, it turns black
 function changeCellColors() {
-    pad.addEventListener('mousemove', e => e.target.style.backgroundColor = 'black');
+    pad.addEventListener('mouseover', e => e.target.style.backgroundColor = 'black');
 }
 
 //erases cells in sketch pad
 function eraseCellColors() {
-    pad.addEventListener('mouseover', e => e.target.style.backgroundColor = 'white');
+    pad.addEventListener('mouseover', function(e) {
+        if (e.target.className === 'cell') {
+            e.target.style.backgroundColor = 'white';
+        }
+    });
 }
