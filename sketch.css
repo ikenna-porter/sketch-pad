@@ -42,6 +42,18 @@ body {
     border-radius: 5px;
 }
 
+.blank-sketch-pad {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-gap: 1px;
+    width: 750px;
+    height: 600px;
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
 .cell {
     background-color: white;
     width: auto;
