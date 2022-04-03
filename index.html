@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1>Sketch Pad</h1>
+    <h1>Retro Sketch</h1>
     <div class="content">
         <div class="tool-bar">
             <div class="pixels">
@@ -20,14 +20,15 @@
             </div>
             <div class="pen-color">
                 <label>Pen Color</label>
-                <label for="black-pen">Default:</label>
+                <label class="small" for="black-pen">Default:</label>
                 <input type="button" id="black-button" value="Black" name="black-pen">
-                <label for="colored-pen">Choose your color:</label>
+                <label class="small" for="colored-pen">Choose your color:</label>
                 <input type="color" name="colored-pen" value="#53f2f1" id="colored-pen">
             </div>
             <div class="erase">
-                <input type="button" id="eraser-button" value="Eraser">
-                <input type="button" id="clear-button" value="Clear">
+                <label for="erasers">Delete Content</label>
+                <input name ="erasers" type="button" id="eraser-button" value="Eraser">
+                <input name="erasers" type="button" id="clear-button" value="Clear">
             </div>
         </div>
         <div class="sketch-pad">

@@ -16,6 +16,8 @@ h1 {
     margin-top: 0;
     margin-bottom: 50px;
     background-color: #B7CADB;
+    color: #F3E9DD;
+    border-bottom: #DAB88B 5px solid;
 }
 .content {
     display: flex;
@@ -34,9 +36,39 @@ h1 {
     border-radius: 5px;
 }
 
-.tool-bar input {
+input {
     display: block;
+    width: 55px;
+    height: 25px;
+    margin-bottom: 5px;
 }
+
+#pixel-range {
+    width:auto;
+    height: auto;
+}
+
+.pen-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pen-color label, .erase label {
+    margin-bottom: 10px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.erase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 .sketch-pad {
     display: grid;
@@ -49,18 +81,6 @@ h1 {
     border: 5px solid #DAB88B;
     border-radius: 5px;
 }
-
-/* .blank-sketch-pad {
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: none;
-    grid-gap: 1px;
-    width: 750px;
-    height: 600px;
-    background-color: black;
-    border: 5px solid black;
-    border-radius: 5px;
-} */
 
 .cell {
     background-color: #FDF6EC;
